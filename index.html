@@ -1,1 +1,1042 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Carlos Eduardo Suarez Baptista | Software Engineer</title>
+
+  <meta name="description" content="Carlos Eduardo Suarez Baptista — Profissional de Tecnologia da Informação, graduando em Engenharia de Software, com experiência em infraestrutura, sistemas, redes, virtualização, monitoramento e desenvolvimento.">
+  <meta name="author" content="Carlos Eduardo Suarez Baptista">
+
+  <style>
+    :root {
+      --bg: #0b1120;
+      --bg-secondary: #111827;
+      --card: rgba(17, 24, 39, 0.85);
+      --border: rgba(148, 163, 184, 0.18);
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --primary: #38bdf8;
+      --secondary: #818cf8;
+      --success: #34d399;
+      --max-width: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(56, 189, 248, 0.12), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(129, 140, 248, 0.10), transparent 35%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max-width), 92%);
+      margin: auto;
+    }
+
+    /* NAVBAR */
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(11, 17, 32, 0.82);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-content {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .nav-links a {
+      transition: 0.25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 70px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 13px;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      background: rgba(56, 189, 248, 0.07);
+      color: var(--primary);
+      font-size: 0.82rem;
+      margin-bottom: 22px;
+    }
+
+    .status {
+      width: 8px;
+      height: 8px;
+      background: var(--success);
+      border-radius: 50%;
+      box-shadow: 0 0 12px var(--success);
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 5.8rem);
+      line-height: 0.98;
+      letter-spacing: -4px;
+      margin-bottom: 25px;
+    }
+
+    h1 span {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.35rem;
+      color: #cbd5e1;
+      max-width: 720px;
+      margin-bottom: 20px;
+    }
+
+    .hero-description {
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 32px;
+      font-size: 1rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 13px 21px;
+      border-radius: 9px;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      transition: 0.25s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #020617;
+      border: none;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.03);
+      color: var(--text);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* PROFILE CARD */
+
+    .profile-card {
+      padding: 35px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: 20px;
+      box-shadow: 0 25px 80px rgba(0,0,0,0.28);
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 30px;
+    }
+
+    .avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.7rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #020617;
+    }
+
+    .profile-header h2 {
+      font-size: 1.2rem;
+    }
+
+    .profile-header p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .profile-item {
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .profile-item:last-child {
+      border-bottom: none;
+    }
+
+    .profile-item strong {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--primary);
+      margin-bottom: 3px;
+    }
+
+    .profile-item span {
+      color: #cbd5e1;
+      font-size: 0.92rem;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 110px 0;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      letter-spacing: -1px;
+    }
+
+    .section-title span {
+      color: var(--primary);
+    }
+
+    .section-description {
+      color: var(--muted);
+      max-width: 750px;
+      margin-bottom: 45px;
+    }
+
+    /* CARDS */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 27px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    .card-icon {
+      font-size: 1.8rem;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    /* SKILLS */
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      padding: 9px 14px;
+      border-radius: 8px;
+      background: rgba(56, 189, 248, 0.06);
+      border: 1px solid rgba(56, 189, 248, 0.16);
+      color: #cbd5e1;
+      font-size: 0.88rem;
+    }
+
+    /* JOURNEY */
+
+    .journey {
+      position: relative;
+      max-width: 850px;
+    }
+
+    .journey::before {
+      content: "";
+      position: absolute;
+      left: 9px;
+      top: 8px;
+      bottom: 8px;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .journey-item {
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 38px;
+    }
+
+    .journey-dot {
+      position: absolute;
+      left: 3px;
+      top: 8px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.5);
+    }
+
+    .journey-item h3 {
+      margin-bottom: 5px;
+    }
+
+    .journey-item p {
+      color: var(--muted);
+    }
+
+    /* TERMINAL */
+
+    .terminal {
+      background: #020617;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      overflow: hidden;
+      max-width: 900px;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.3);
+    }
+
+    .terminal-header {
+      padding: 12px 17px;
+      background: #0f172a;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .terminal-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .terminal-dots i {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #475569;
+    }
+
+    .terminal-body {
+      padding: 25px;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 0.9rem;
+      color: #cbd5e1;
+    }
+
+    .terminal-line {
+      margin-bottom: 10px;
+    }
+
+    .terminal-green {
+      color: var(--success);
+    }
+
+    .terminal-blue {
+      color: var(--primary);
+    }
+
+    /* CTA */
+
+    .cta {
+      text-align: center;
+      padding: 70px 30px;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background:
+        radial-gradient(circle at center, rgba(56,189,248,0.09), transparent 65%),
+        var(--card);
+    }
+
+    .cta h2 {
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: var(--muted);
+      max-width: 650px;
+      margin: 0 auto 28px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .nav-links {
+        display: none;
+      }
+
+      h1 {
+        font-size: 3.2rem;
+        letter-spacing: -2px;
+      }
+
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .profile-card {
+        padding: 24px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="container nav-content">
+
+```
+  <a href="#inicio" class="logo">
+    Carlos<span>Dev</span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#competencias">Competências</a></li>
+    <li><a href="#trajetoria">Trajetória</a></li>
+    <li><a href="#projetos">Projetos</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+
+</div>
+```
+
+  </nav>
+
+  <!-- HERO -->
+
+  <main>
+
+```
+<section class="hero" id="inicio">
+
+  <div class="container hero-grid">
+
+    <div>
+
+      <div class="badge">
+        <span class="status"></span>
+        Em evolução profissional
+      </div>
+
+      <h1>
+        Carlos Eduardo<br>
+        <span>Suarez Baptista</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Tecnologia da Informação → Engenharia de Software
+      </p>
+
+      <p class="hero-description">
+        Profissional de TI com experiência em infraestrutura, sistemas,
+        redes, virtualização, monitoramento e ambientes corporativos,
+        atualmente ampliando sua atuação para desenvolvimento de software.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          href="https://www.linkedin.com/in/cesbaptista/"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-primary"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://github.com/cesbaptista"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-secondary"
+        >
+          GitHub
+        </a>
+
+        <a href="#projetos" class="btn btn-secondary">
+          Ver projetos
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="profile-card">
+
+      <div class="profile-header">
+
+        <div class="avatar">
+          CB
+        </div>
+
+        <div>
+          <h2>Software Engineer in Progress</h2>
+          <p>Brasília • Brasil</p>
+        </div>
+
+      </div>
+
+      <div class="profile-item">
+        <strong>FORMAÇÃO</strong>
+        <span>Engenharia de Software</span>
+      </div>
+
+      <div class="profile-item">
+        <strong>EXPERIÊNCIA</strong>
+        <span>Infraestrutura e Tecnologia da Informação</span>
+      </div>
+
+      <div class="profile-item">
+        <strong>FOCO ATUAL</strong>
+        <span>Desenvolvimento • Backend • DevOps • Cloud</span>
+      </div>
+
+      <div class="profile-item">
+        <strong>OBJETIVO</strong>
+        <span>Engenharia de Software e Arquitetura de Sistemas</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SOBRE -->
+
+<section id="sobre">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Sobre <span>mim</span>
+    </h2>
+
+    <p class="section-description">
+      Minha carreira começou e se desenvolveu na área de Tecnologia da
+      Informação, especialmente em infraestrutura, operações e sustentação
+      de ambientes corporativos.
+    </p>
+
+    <div class="cards">
+
+      <article class="card">
+
+        <div class="card-icon">🏗️</div>
+
+        <h3>Infraestrutura</h3>
+
+        <p>
+          Experiência com ambientes de TI, servidores, redes,
+          virtualização, armazenamento, backup, monitoramento e
+          sustentação de serviços.
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="card-icon">💻</div>
+
+        <h3>Software</h3>
+
+        <p>
+          Em formação em Engenharia de Software, desenvolvendo
+          conhecimentos em programação, arquitetura, APIs, bancos de
+          dados, testes e qualidade de software.
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="card-icon">☁️</div>
+
+        <h3>Cloud & DevOps</h3>
+
+        <p>
+          Interesse em automação, CI/CD, observabilidade, infraestrutura
+          como código, cloud computing e confiabilidade de sistemas.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- COMPETÊNCIAS -->
+
+<section id="competencias">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Competências <span>técnicas</span>
+    </h2>
+
+    <p class="section-description">
+      Tecnologias, plataformas e áreas de conhecimento que fazem parte da
+      minha experiência ou da minha atual evolução profissional.
+    </p>
+
+    <div class="skills">
+
+      <span class="skill">Linux</span>
+      <span class="skill">Windows Server</span>
+      <span class="skill">VMware</span>
+      <span class="skill">VMware NSX</span>
+      <span class="skill">Zabbix</span>
+      <span class="skill">PRTG</span>
+      <span class="skill">Power BI</span>
+      <span class="skill">Redes</span>
+      <span class="skill">Virtualização</span>
+      <span class="skill">Backup</span>
+      <span class="skill">Storage</span>
+      <span class="skill">Monitoramento</span>
+      <span class="skill">Git</span>
+      <span class="skill">GitHub</span>
+      <span class="skill">Programação</span>
+      <span class="skill">APIs</span>
+      <span class="skill">Banco de Dados</span>
+      <span class="skill">Engenharia de Software</span>
+      <span class="skill">DevOps</span>
+      <span class="skill">CI/CD</span>
+      <span class="skill">Cloud Computing</span>
+      <span class="skill">Arquitetura de Sistemas</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TRAJETÓRIA -->
+
+<section id="trajetoria">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Minha <span>trajetória</span>
+    </h2>
+
+    <p class="section-description">
+      Uma evolução profissional baseada em experiência prática e
+      aprendizado contínuo.
+    </p>
+
+    <div class="journey">
+
+      <div class="journey-item">
+
+        <span class="journey-dot"></span>
+
+        <h3>Experiência em Tecnologia da Informação</h3>
+
+        <p>
+          Atuação profissional em ambientes corporativos e governamentais,
+          trabalhando com infraestrutura, sistemas, redes, operações e
+          sustentação de serviços de TI.
+        </p>
+
+      </div>
+
+
+      <div class="journey-item">
+
+        <span class="journey-dot"></span>
+
+        <h3>Infraestrutura, monitoramento e virtualização</h3>
+
+        <p>
+          Desenvolvimento de experiência prática com plataformas de
+          virtualização, monitoramento, redes, armazenamento, backup e
+          continuidade operacional.
+        </p>
+
+      </div>
+
+
+      <div class="journey-item">
+
+        <span class="journey-dot"></span>
+
+        <h3>Engenharia de Software</h3>
+
+        <p>
+          Início da graduação em Engenharia de Software e aprofundamento
+          em programação, desenvolvimento, arquitetura e engenharia de
+          sistemas.
+        </p>
+
+      </div>
+
+
+      <div class="journey-item">
+
+        <span class="journey-dot"></span>
+
+        <h3>Próximo passo</h3>
+
+        <p>
+          Consolidar a transição para desenvolvimento de software,
+          conectando experiência em infraestrutura com Backend, DevOps,
+          Cloud e arquitetura de sistemas.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROJETOS -->
+
+<section id="projetos">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Projetos & <span>laboratórios</span>
+    </h2>
+
+    <p class="section-description">
+      Este espaço será utilizado para apresentar projetos práticos,
+      estudos, laboratórios e experimentos desenvolvidos durante minha
+      evolução em Engenharia de Software.
+    </p>
+
+    <div class="cards">
+
+      <article class="card">
+
+        <div class="card-icon">🧑‍💻</div>
+
+        <h3>Desenvolvimento</h3>
+
+        <p>
+          Aplicações, APIs, exercícios e projetos desenvolvidos durante
+          minha formação em Engenharia de Software.
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="card-icon">⚙️</div>
+
+        <h3>Automação</h3>
+
+        <p>
+          Scripts, automações e soluções para reduzir tarefas manuais e
+          melhorar eficiência operacional.
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="card-icon">🖥️</div>
+
+        <h3>Infraestrutura</h3>
+
+        <p>
+          Laboratórios e experimentos envolvendo redes, virtualização,
+          monitoramento, servidores e ambientes de TI.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TERMINAL -->
+
+<section>
+
+  <div class="container">
+
+    <h2 class="section-title">
+      O que estou <span>construindo</span>
+    </h2>
+
+    <p class="section-description">
+      Mais do que acumular cursos, estou buscando transformar conhecimento
+      em projetos práticos.
+    </p>
+
+    <div class="terminal">
+
+      <div class="terminal-header">
+
+        <div class="terminal-dots">
+          <i></i>
+          <i></i>
+          <i></i>
+        </div>
+
+      </div>
+
+      <div class="terminal-body">
+
+        <div class="terminal-line">
+          <span class="terminal-green">$</span>
+          whoami
+        </div>
+
+        <div class="terminal-line">
+          &gt; Carlos Eduardo Suarez Baptista
+        </div>
+
+        <br>
+
+        <div class="terminal-line">
+          <span class="terminal-green">$</span>
+          current_goal
+        </div>
+
+        <div class="terminal-line">
+          &gt; Engenharia de Software
+        </div>
+
+        <br>
+
+        <div class="terminal-line">
+          <span class="terminal-green">$</span>
+          focus
+        </div>
+
+        <div class="terminal-line terminal-blue">
+          &gt; Backend | DevOps | Cloud | Architecture
+        </div>
+
+        <br>
+
+        <div class="terminal-line">
+          <span class="terminal-green">$</span>
+          philosophy
+        </div>
+
+        <div class="terminal-line">
+          &gt; Aprender → Construir → Testar → Melhorar
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section id="contato">
+
+  <div class="container">
+
+    <div class="cta">
+
+      <h2>Vamos conversar?</h2>
+
+      <p>
+        Estou aberto a conexões profissionais, oportunidades na área de
+        tecnologia e projetos que permitam transformar conhecimento em
+        soluções reais.
+      </p>
+
+      <div class="buttons" style="justify-content:center;">
+
+        <a
+          href="https://www.linkedin.com/in/cesbaptista/"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-primary"
+        >
+          Conectar no LinkedIn
+        </a>
+
+        <a
+          href="https://github.com/cesbaptista"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-secondary"
+        >
+          Ver GitHub
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+```
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+```
+<div class="container footer-content">
+
+  <span>
+    © 2026 Carlos Eduardo Suarez Baptista
+  </span>
+
+  <span>
+    Tecnologia • Engenharia de Software • Evolução contínua
+  </span>
+
+</div>
+```
+
+  </footer>
+
+</body>
+</html>
 
