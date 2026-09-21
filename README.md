@@ -131,34 +131,79 @@ Cloud
 
 ---
 
-## 📂 O que você encontrará neste GitHub
+Aqui está a descrição adaptada para a estrutura das suas **seis linhas de evolução**, mantendo o estilo exato e a organização que você apresentou:
 
-Este repositório será utilizado para documentar minha evolução profissional e acadêmica através de projetos práticos.
+---
 
-### 🔹 Projetos de desenvolvimento
+### 📂 O que você encontrará neste GitHub
 
-Aplicações desenvolvidas durante minha formação e estudos.
+Este repositório principal e a estrutura da minha conta serão utilizados para documentar minha evolução profissional e acadêmica através de projetos práticos, organizados em seis linhas de evolução:
 
-### 🔹 Projetos de infraestrutura
+---
 
-Laboratórios, automações, configurações e experimentos relacionados a infraestrutura e operações.
+#### 🔹 `01-python-it-labs`
 
-### 🔹 Estudos de Engenharia de Software
+**Laboratórios, Automação & Utilitários**
 
-Exercícios e projetos relacionados a:
+* **Projetos de desenvolvimento:** Scripts em Python para scraping de dados, automação de rotinas e processamento estruturado.
+* **Projetos de infraestrutura:** Automação de tarefas de sistema, manipulação local de arquivos e utilitários para ambientes operacionais.
+* **Laboratórios:** Ambientes práticos para testes rápidos de código, algoritmos e criação de ferramentas de suporte.
 
-* Algoritmos
-* Programação
-* Banco de dados
-* Engenharia de requisitos
-* Arquitetura de software
-* Testes
-* Qualidade de software
-* DevOps
+---
 
-### 🔹 Laboratórios
+#### 🔹 `02-it-management-platform`
 
-Ambientes práticos para testar tecnologias, arquiteturas e integrações.
+**Governança & Gestão de Projetos de TI**
+
+* **Projetos de infraestrutura:** Workflows de automação e integração de processos (n8n, Make) com plataformas de ITSM e operações.
+* **Estudos de Engenharia de Software:** Engenharia de requisitos, mapeamento de processos, qualidade de software e metodologias ágeis de gestão.
+* **Laboratórios:** Ambientes de integração entre ferramentas de gestão de projetos (Jira, Trello) e pipelines operacionais.
+
+---
+
+#### 🔹 `03-security-platform`
+
+**Cyber Defense & Governança de Segurança**
+
+* **Projetos de desenvolvimento:** Implementação de algoritmos criptográficos, hashing seguro (Argon2id) e controle de acessos.
+* **Projetos de infraestrutura:** Arquitetura de Gestão de Identidades (IAM), políticas de segurança e conformidade LGPD/OWASP/NIST.
+* **Estudos de Engenharia de Software:** Aplicação de práticas de *Privacy by Design*, testes de segurança e modelagem de ameaças.
+
+---
+
+#### 🔹 `04-ai-it-platform`
+
+**Inteligência Artificial Aplicada a Operações de TI (AIOps)**
+
+* **Projetos de desenvolvimento:** Pipelines analíticos e agentes inteligentes integrados à tomada de decisão estratégica.
+* **Projetos de infraestrutura:** Aplicações de IA para otimização, monitoramento preditivo e automação de suporte técnico.
+* **Laboratórios:** Experimentos com modelos preditivos para análise de desempenho em alta performance e diagnóstico de ambientes.
+
+---
+
+#### 🔹 `05-ai-security-platform`
+
+**Inteligência Artificial em Cibersegurança**
+
+* **Projetos de desenvolvimento:** Ferramentas para detecção de anomalias em tráfego de rede e análise automatizada de logs.
+* **Estudos de Engenharia de Software:** Mitigação de vulnerabilidades específicas em pipelines de IA e resposta prévia a incidentes de segurança.
+* **Laboratórios:** Simulações e ambientes de teste para defesa cibernética baseada em IA e proteção de modelos.
+
+---
+
+#### 🔹 `06-enterprise-ai-architecture`
+
+**Arquitetura Corporativa & Sistemas Escaláveis**
+
+* **Projetos de desenvolvimento:** Sistemas avançados integrando Inteligência Artificial generativa e preditiva em grande escala.
+* **Estudos de Engenharia de Software:**
+* Algoritmos e estruturas escaláveis
+* Arquitetura de software (microserviços e alta disponibilidade)
+* Banco de dados relacionais e não-relacionais
+* Práticas avançadas de DevOps, integração contínua (CI/CD) e testes
+
+
+* **Laboratórios:** Montagem de ecossistemas corporativos completos, resilientes e orientados a alto desempenho.
 
 ---
 
